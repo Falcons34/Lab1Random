@@ -4,7 +4,7 @@ public class GuessingGame {
 
 	private int generateRandomNumber() {
 		Random rand = new Random();
-		int upperbound = 10;
+		int upperbound = 100;
 		return rand.nextInt(upperbound);
 	}
 // guess is higher or lower
