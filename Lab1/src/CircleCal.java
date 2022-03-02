@@ -13,7 +13,7 @@ public class CircleCal {
 		double cosine = Cosine(val);
 		double tan = Tangent(val);
 		System.out.println("Degrees Radians Sine Cosine Tangent");
-		System.out.printf(" %5.2f  %5.2f  %5.2f  %5.2f  %5.2f%n",val,rad,sine,cosine,tan);
+		System.out.printf(" %5.0f  %5.4f  %5.4f  %5.4f  %5.4f%n",val,rad,sine,cosine,tan);
 	}
 	private double Radians(double input){
 		return Math.toRadians(input);

@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
@@ -43,7 +44,7 @@ public class Main {
 		int selection;
 		Scanner input = new Scanner(System.in);
 		do{
-			System.out.println("Choose from these choices");
+			System.out.println("\nChoose from these choices");
 			System.out.println("1 - Play Number guessing game");
 			System.out.println("2 - Print Degrees Radians Sine Cosine Tangent");
 			System.out.println("3 - print numbers in a pattern");
@@ -53,4 +54,5 @@ public class Main {
 		selection = input.nextInt();
 		return selection;
 	}
+
 }
