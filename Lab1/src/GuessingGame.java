@@ -2,14 +2,6 @@ import java.util.Random;
 import java.util.Scanner;
 public class GuessingGame {
 
-	public static void main(String[] args) {
-		// Create a new instance of the GuessingGame class
-		GuessingGame game;
-		game = new GuessingGame();
-		// Call the play method
-		game.play();
-
-	}
 	private int generateRandomNumber() {
 		Random rand = new Random();
 		int upperbound = 10;
@@ -27,11 +19,11 @@ public class GuessingGame {
 		return(true);
 	}
 
-	private void play() {
+	public void play() {
 		int answer = generateRandomNumber();
-		int guess = -1;
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Guess a magic number between 0 and 100");
+		int guess;
 		do{
 			System.out.print("Enter your guess:");
 			while (!scanner.hasNextInt()) {
