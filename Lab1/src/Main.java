@@ -1,11 +1,15 @@
-import java.io.IOException;
+import resources.CircleCal;
+import resources.GuessingGame;
+import resources.InitialMaker;
+import resources.PrintLoop;
+
 import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) {
 		int userChoice = 0;
 		System.out.println("Welcome to week 1 Labs");
-		while(userChoice != 5){
+		while (userChoice != 5) {
 			userChoice = menu();
 			switch (userChoice) {
 				case 1 -> {
@@ -30,29 +34,30 @@ public class Main {
 				}
 				case 5 -> System.out.println("Exiting");
 			}
+		}
 	}
 
-	}	private static void pause() {
+	private static void pause() {
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 			System.err.format("IOException: %s%n", e);
 		}
 	}
+
 	public static int menu() {
 //		Selection menu class
 		int selection;
 		Scanner input = new Scanner(System.in);
-		do{
+		do {
 			System.out.println("\nChoose from these choices");
 			System.out.println("1 - Play Number guessing game");
 			System.out.println("2 - Print Degrees Radians Sine Cosine Tangent");
 			System.out.println("3 - print numbers in a pattern");
 			System.out.println("4 - computes your initials");
 			System.out.println("5 - Quit");
-		}while(!input.hasNextInt());
+		} while (!input.hasNextInt());
 		selection = input.nextInt();
 		return selection;
 	}
-
 }
