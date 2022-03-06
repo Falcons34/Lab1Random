@@ -4,10 +4,12 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class GuessingGame {
-	private int generateRandomNumber() {
-		Random rand = new Random();
-		int upperbound = 100;
-		return rand.nextInt(upperbound);
+	public static int generateRandomNumber() {
+		int min = 0;
+		int max = 100;
+		Random r = new Random();
+		int randomNum = r.nextInt(max - min);
+		return randomNum + min;
 	}
 
 	// guess is higher or lower
@@ -33,6 +35,7 @@ public class GuessingGame {
 			while (!scanner.hasNextInt()) {
 				String input = scanner.next();
 				System.out.printf("\"%s\" is not a valid number.%n", input);
+				System.out.print("Enter your guess:");
 			}
 			guess = scanner.nextInt();
 		}
